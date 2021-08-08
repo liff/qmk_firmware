@@ -30,11 +30,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define USE_SERIAL_PD2
 
-//#define TAPPING_FORCE_HOLD
-#define TAPPING_TERM 180
-#define RETRO_TAPPING
-#define PERMISSIVE_HOLD
-#define IGNORE_MOD_TAP_INTERRUPT
+//#define TAPPING_TERM 150
+//#define RETRO_TAPPING
+//#define PERMISSIVE_HOLD
+//#define IGNORE_MOD_TAP_INTERRUPT
+#define UNICODE_SELECTED_MODES UC_LNX
 
 
 //#ifdef RGBLIGHT_ENABLE
