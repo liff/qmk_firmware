@@ -69,6 +69,7 @@
 #define LAT LALT_T
 #define RAT RALT_T
 #define LGT LGUI_T
+#define OSRALT OSM(MOD_RALT)
 
 #define _1 KC_1
 #define _2 KC_2
