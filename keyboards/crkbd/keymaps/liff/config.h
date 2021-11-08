@@ -36,6 +36,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define IGNORE_MOD_TAP_INTERRUPT
 #define UNICODE_SELECTED_MODES UC_LNX
 
+#define LEADER_TIMEOUT 300
+#define LEADER_NO_TIMEOUT
+
 
 //#ifdef RGBLIGHT_ENABLE
 //   #undef RGBLED_NUM

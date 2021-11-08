@@ -65,7 +65,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
      _______, XXXXXXX,   _F4   ,  _F5   ,  _F6   , _F11,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, OSRALT,  _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     _______, XXXXXXX,   _F1   ,  _F2   ,  _F3   , _F12   ,                     XXXXXXX, XXXXXXX, XXXXXXX, RGB_MOD, XXXXXXX, _______,
+     _______, XXXXXXX,   _F1   ,  _F2   ,  _F3   , _F12   ,                     XXXXXXX, XXXXXXX, XXXXXXX, RGB_MOD,  TO(4),  _______,
+  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
+                                         _______, _______, _______,    _______, _______, _______
+                                      //`--------------------------'  `--------------------------'
+  ),
+
+  [4] = LAYOUT_split_3x6_3(
+  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
+       TAB,     _Q,      _W,      _E,      _R,      _T,                           _Y,      _U,      _I,      _O,      _P,      BSP,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+       ESC,     _A,      _S,      _D,      _F,      _G,                           _H,      _J,      _K,      _L,      SCL,     QUO,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      KC_LSFT,  _Z,      _X,      _C,      _V,      _B,                           _N,      _M,      COM,     DOT,     SLS,   KC_RSFT,
+  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
+                                          _______,  SPC,   MO(5),      KC_LALT,   ENT,   _______
+                                      //`--------------------------'  `--------------------------'
+  ),
+
+  [5] = LAYOUT_split_3x6_3(
+  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
+       GRV,   _______,    _7,     _8,      _9,       _0,                        _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END,   TO(0),
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+     _______, KC_LEAD,    _4,     _5,      _6,    _______,                      _______, KC_LEFT, KC_DOWN,  KC_UP,  KC_RGHT, _______,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+     _______, _______,    _1,     _2,      _3,    _______,                      _______, _______, _______, _______, _______, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                          _______, _______, _______,    _______, _______, _______
                                       //`--------------------------'  `--------------------------'
@@ -176,6 +200,49 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   return true;
 }
 #endif // OLED_DRIVER_ENABLE
+
+LEADER_EXTERNS();
+
+void matrix_scan_user() {
+    if (layer_state_is(5)) {
+
+        LEADER_DICTIONARY() {
+            leading = false;
+
+            SEQ_ONE_KEY(KC_1) {
+                register_code(KC_F1);
+                unregister_code(KC_F1);
+            } else SEQ_ONE_KEY(KC_2) {
+                register_code(KC_F2);
+                unregister_code(KC_F2);
+            } else SEQ_ONE_KEY(KC_3) {
+                register_code(KC_F3);
+                unregister_code(KC_F3);
+            } else SEQ_ONE_KEY(KC_4) {
+                register_code(KC_F4);
+                unregister_code(KC_F4);
+            } else SEQ_ONE_KEY(KC_5) {
+                register_code(KC_F5);
+                unregister_code(KC_F5);
+            } else SEQ_ONE_KEY(KC_6) {
+                register_code(KC_F6);
+                unregister_code(KC_F6);
+            } else SEQ_ONE_KEY(KC_7) {
+                register_code(KC_F7);
+                unregister_code(KC_F7);
+            } else SEQ_ONE_KEY(KC_8) {
+                register_code(KC_F8);
+                unregister_code(KC_F8);
+            } else SEQ_ONE_KEY(KC_9) {
+                register_code(KC_F9);
+                unregister_code(KC_F9);
+            } else SEQ_ONE_KEY(KC_0) {
+                register_code(KC_F10);
+               unregister_code(KC_F10);
+            }
+        }
+    }
+}
 
 layer_state_t layer_state_set_user(layer_state_t state) {
     return update_tri_layer_state(state, 1, 2, 3);
