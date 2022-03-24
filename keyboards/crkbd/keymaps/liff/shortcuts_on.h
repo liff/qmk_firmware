@@ -65,6 +65,7 @@
 #define INS KC_INS
 #define ELL UC(0x2026)
 #define ENZ UC(0x2013)
+#define EMZ UC(0x2014)
 
 #define LAT LALT_T
 #define RAT RALT_T
