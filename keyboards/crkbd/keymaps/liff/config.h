@@ -38,7 +38,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define LEADER_TIMEOUT 300
 #define LEADER_NO_TIMEOUT
-
+//#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+#define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
 
 //#ifdef RGBLIGHT_ENABLE
 //   #undef RGBLED_NUM
