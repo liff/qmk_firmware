@@ -5,6 +5,8 @@
 
 #include <keymap_us_international_linux.h>
 
+// clang-format off
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #include "shortcuts_on.h"
   [0] = LAYOUT_split_3x6_3(
@@ -82,45 +84,54 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #include "shortcuts_off.h"
 };
 
+// clang-format on
 
 LEADER_EXTERNS();
 
 void matrix_scan_user() {
     if (layer_state_is(5)) {
-
         LEADER_DICTIONARY() {
             leading = false;
 
             SEQ_ONE_KEY(KC_1) {
                 register_code(KC_F1);
                 unregister_code(KC_F1);
-            } else SEQ_ONE_KEY(KC_2) {
+            }
+            else SEQ_ONE_KEY(KC_2) {
                 register_code(KC_F2);
                 unregister_code(KC_F2);
-            } else SEQ_ONE_KEY(KC_3) {
+            }
+            else SEQ_ONE_KEY(KC_3) {
                 register_code(KC_F3);
                 unregister_code(KC_F3);
-            } else SEQ_ONE_KEY(KC_4) {
+            }
+            else SEQ_ONE_KEY(KC_4) {
                 register_code(KC_F4);
                 unregister_code(KC_F4);
-            } else SEQ_ONE_KEY(KC_5) {
+            }
+            else SEQ_ONE_KEY(KC_5) {
                 register_code(KC_F5);
                 unregister_code(KC_F5);
-            } else SEQ_ONE_KEY(KC_6) {
+            }
+            else SEQ_ONE_KEY(KC_6) {
                 register_code(KC_F6);
                 unregister_code(KC_F6);
-            } else SEQ_ONE_KEY(KC_7) {
+            }
+            else SEQ_ONE_KEY(KC_7) {
                 register_code(KC_F7);
                 unregister_code(KC_F7);
-            } else SEQ_ONE_KEY(KC_8) {
+            }
+            else SEQ_ONE_KEY(KC_8) {
                 register_code(KC_F8);
                 unregister_code(KC_F8);
-            } else SEQ_ONE_KEY(KC_9) {
+            }
+            else SEQ_ONE_KEY(KC_9) {
                 register_code(KC_F9);
                 unregister_code(KC_F9);
-            } else SEQ_ONE_KEY(KC_0) {
+            }
+            else SEQ_ONE_KEY(KC_0) {
                 register_code(KC_F10);
-               unregister_code(KC_F10);
+                unregister_code(KC_F10);
             }
         }
     }
