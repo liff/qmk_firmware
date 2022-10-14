@@ -20,35 +20,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-//#define USE_MATRIX_I2C
-
-/* Select hand configuration */
-
-//#define MASTER_LEFT
 #define MASTER_RIGHT
-// #define EE_HANDS
 
 #define USE_SERIAL_PD2
 
-//#define TAPPING_TERM 150
-//#define RETRO_TAPPING
-//#define PERMISSIVE_HOLD
-//#define IGNORE_MOD_TAP_INTERRUPT
 #define UNICODE_SELECTED_MODES UC_LNX
 
 #define LEADER_TIMEOUT 300
 #define LEADER_NO_TIMEOUT
 //#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 #define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
-
-//#ifdef RGBLIGHT_ENABLE
-//   #undef RGBLED_NUM
-//    #define RGBLIGHT_ANIMATIONS
-//    #define RGBLED_NUM 27
-//    #define RGBLIGHT_LIMIT_VAL 120
-//    #define RGBLIGHT_HUE_STEP 10
-//    #define RGBLIGHT_SAT_STEP 17
-//    #define RGBLIGHT_VAL_STEP 17
-//#endif
-
-#define OLED_FONT_H "keyboards/crkbd/lib/glcdfont.c"
