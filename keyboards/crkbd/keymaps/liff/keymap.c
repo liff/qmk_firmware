@@ -24,20 +24,20 @@ enum unicode_names {
 };
 
 const uint32_t PROGMEM unicode_map[] = {
-  [PLM] = 0x00B1,
-  [LAM] = 0x03BB,
-  [ELL] = 0x2026,
-  [ENZ] = 0x2013,
-  [EMZ] = 0x2014,
-  [IBA] = 0x203D,
-  [LAR] = 0x21D0,
-  [UAR] = 0x21D1,
-  [RAR] = 0x21D2,
-  [DAR] = 0x21D3,
-  [AEQ] = 0x2248,
-  [NEQ] = 0x2260,
-  [LTE] = 0x2264,
-  [GTE] = 0x2265,
+  [PLM] = 0x00B1, // ±
+  [LAM] = 0x03BB, // λ
+  [ELL] = 0x2026, // …
+  [ENZ] = 0x2013, // –
+  [EMZ] = 0x2014, // —
+  [IBA] = 0x203D, // ‽
+  [LAR] = 0x21D0, // ⇐
+  [UAR] = 0x21D1, // ⇑
+  [RAR] = 0x21D2, // ⇒
+  [DAR] = 0x21D3, // ⇓
+  [AEQ] = 0x2248, // ≈
+  [NEQ] = 0x2260, // ≠
+  [LTE] = 0x2264, // ≤
+  [GTE] = 0x2265, // ≥
 };
 
 // clang-format off
