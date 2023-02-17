@@ -8,6 +8,7 @@
 
 enum unicode_names {
     PLM,
+    MDO,
     LAM,
     ELL,
     ENZ,
@@ -25,6 +26,7 @@ enum unicode_names {
 
 const uint32_t PROGMEM unicode_map[] = {
     [PLM] = 0x00B1, // ±
+    [MDO] = 0x00B7, // ·
     [LAM] = 0x03BB, // λ
     [ELL] = 0x2026, // …
     [ENZ] = 0x2013, // –
@@ -71,11 +73,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [2] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-     _______,  X(ELL),    _7,      _8,      _9,      _0,                         OSL(6), KC_HOME, KC_PGDN, KC_PGUP,  KC_END, _______,
+     _______, XXXXXXX,    _7,      _8,      _9,      _0,                         OSL(6), KC_HOME, KC_PGDN, KC_PGUP,  KC_END, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     _______,  X(EMZ),    _4,      _5,      _6,   US_ADIA,                      US_ODIA, KC_LEFT, KC_DOWN,  KC_UP,  KC_RGHT, _______,
+     _______, XXXXXXX,    _4,      _5,      _6,   US_ADIA,                      US_ODIA, KC_LEFT, KC_DOWN,  KC_UP,  KC_RGHT, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     _______,  X(ENZ),    _1,      _2,      _3,   US_LDQU,                      US_RDQU,    DEL,    INS,     DOT,   XXXXXXX, _______,
+     _______, XXXXXXX,    _1,      _2,      _3,   US_LDQU,                      US_RDQU,    DEL,    INS,     DOT,   XXXXXXX, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           _______,_______, _______,    _______, _______, _______
                                       //`--------------------------'  `--------------------------'
@@ -119,11 +121,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [6] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-     UC_WINC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                       US_MUL,  X(PLM),  X(AEQ),  X(NEQ), XXXXXXX, XXXXXXX,
+     UC_WINC,  X(ELL), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                       US_MUL,  X(PLM),  X(AEQ),  X(NEQ), XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     UC_LINX, XXXXXXX, XXXXXXX, XXXXXXX,  X(LAM), XXXXXXX,                      XXXXXXX,  X(LAR),  X(DAR),  X(UAR),  X(RAR), XXXXXXX,
+     UC_LINX,  X(EMZ), XXXXXXX, XXXXXXX,  X(LAM), XXXXXXX,                       X(MDO),  X(LAR),  X(DAR),  X(UAR),  X(RAR), XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX,  X(LTE),  X(GTE),  X(IBA), XXXXXXX,
+     QK_BOOT,  X(ENZ), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX,  X(LTE),  X(GTE),  X(IBA), XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                          XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX
                                       //`--------------------------'  `--------------------------'
