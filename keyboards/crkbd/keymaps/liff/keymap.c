@@ -73,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [2] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-     _______, XXXXXXX,    _7,      _8,      _9,      _0,                         OSL(6), KC_HOME, KC_PGDN, KC_PGUP,  KC_END, _______,
+     _______, XXXXXXX,    _7,      _8,      _9,      _0,                         OSL(7), KC_HOME, KC_PGDN, KC_PGUP,  KC_END, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
      _______, XXXXXXX,    _4,      _5,      _6,   US_ADIA,                      US_ODIA, KC_LEFT, KC_DOWN,  KC_UP,  KC_RGHT, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -85,7 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [3] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-     _______, KC_BTN2,   _F7   ,  _F8   ,  _F9   , _F10   ,                     XXXXXXX, XXXXXXX, KC_LALT, KC_RCTL, KC_RSFT,  TO(4),
+     _______, KC_BTN2,   _F7   ,  _F8   ,  _F9   , _F10   ,                      TO(4),  XXXXXXX, KC_LALT, KC_RCTL, KC_RSFT, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
      _______, KC_BTN1,   _F4   ,  _F5   ,  _F6   , _F11,                        OSRALT,  KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -109,9 +109,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [5] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       GRV,     LBR,      _7,     _8,      _9,       _0,                        _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END,   TO(0),
+       GRV,     LBR,      _7,     _8,      _9,       _0,                          TO(0), KC_HOME, KC_PGDN, KC_PGUP, KC_END,  _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     KC_LALT, KC_LEAD,    _4,     _5,      _6,      MNS,                        _______, KC_LEFT, KC_DOWN,  KC_UP,  KC_RGHT, _______,
+     KC_LALT,  OSL(6),    _4,     _5,      _6,      MNS,                        _______, KC_LEFT, KC_DOWN,  KC_UP,  KC_RGHT, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
      _______,   RBR,      _1,     _2,      _3,      EQL,                        _______, _______, _______, _______, _______, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
@@ -120,6 +120,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [6] = LAYOUT_split_3x6_3(
+  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
+     _______, _______,  KC_F7,   KC_F8,   KC_F9,  KC_F10,                        _______, _______, _______, _______, _______, _______,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+     _______, _______,  KC_F4,   KC_F5,   KC_F6,  KC_F11,                        _______, _______, _______, _______, _______, _______,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+     _______, _______,  KC_F1,   KC_F2,   KC_F3,  KC_F12,                        _______, _______, _______, _______, _______, _______,
+  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
+                                         _______, _______, _______,    _______, _______, _______
+                                      //`--------------------------'  `--------------------------'
+  ),
+
+  [7] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
      UC_WINC,  X(ELL), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                       US_MUL,  X(PLM),  X(AEQ),  X(NEQ), XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -131,61 +143,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       //`--------------------------'  `--------------------------'
   ),
 
+
 #include "shortcuts_off.h"
 };
 
 // clang-format on
-
-LEADER_EXTERNS();
-
-void matrix_scan_user() {
-    if (layer_state_is(5)) {
-        LEADER_DICTIONARY() {
-            leading = false;
-
-            SEQ_ONE_KEY(KC_1) {
-                register_code(KC_F1);
-                unregister_code(KC_F1);
-            }
-            else SEQ_ONE_KEY(KC_2) {
-                register_code(KC_F2);
-                unregister_code(KC_F2);
-            }
-            else SEQ_ONE_KEY(KC_3) {
-                register_code(KC_F3);
-                unregister_code(KC_F3);
-            }
-            else SEQ_ONE_KEY(KC_4) {
-                register_code(KC_F4);
-                unregister_code(KC_F4);
-            }
-            else SEQ_ONE_KEY(KC_5) {
-                register_code(KC_F5);
-                unregister_code(KC_F5);
-            }
-            else SEQ_ONE_KEY(KC_6) {
-                register_code(KC_F6);
-                unregister_code(KC_F6);
-            }
-            else SEQ_ONE_KEY(KC_7) {
-                register_code(KC_F7);
-                unregister_code(KC_F7);
-            }
-            else SEQ_ONE_KEY(KC_8) {
-                register_code(KC_F8);
-                unregister_code(KC_F8);
-            }
-            else SEQ_ONE_KEY(KC_9) {
-                register_code(KC_F9);
-                unregister_code(KC_F9);
-            }
-            else SEQ_ONE_KEY(KC_0) {
-                register_code(KC_F10);
-                unregister_code(KC_F10);
-            }
-        }
-    }
-}
 
 layer_state_t layer_state_set_user(layer_state_t state) {
     return update_tri_layer_state(state, 1, 2, 3);
