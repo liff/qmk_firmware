@@ -135,9 +135,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
      UC_WINC,  X(ELL), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                       US_MUL,  X(PLM),  X(AEQ),  X(NEQ), XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     UC_LINX,  X(EMZ), XXXXXXX, XXXXXXX,  X(LAM), XXXXXXX,                       X(MDO),  X(LAR),  X(DAR),  X(UAR),  X(RAR), XXXXXXX,
+     UC_LINX,  X(EMZ), US_QRTR, XXXXXXX,  X(LAM), XXXXXXX,                       X(MDO),  X(LAR),  X(DAR),  X(UAR),  X(RAR), XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     QK_BOOT,  X(ENZ), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX,  X(LTE),  X(GTE),  X(IBA), XXXXXXX,
+     QK_BOOT,  X(ENZ), XXXXXXX, US_HALF, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX,  X(LTE),  X(GTE),  X(IBA), XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                          XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX
                                       //`--------------------------'  `--------------------------'
