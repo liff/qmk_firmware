@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include "action_layer.h"
+#include "keycodes.h"
 #include QMK_KEYBOARD_H
 
 #include <keymap_us_international_linux.h>
@@ -172,7 +173,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
      _______, XXXXXXX,    _7,      _8,      _9,      _0,                         OSL(7), KC_HOME, KC_PGDN, KC_PGUP,  KC_END, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     _______, XXXXXXX,    _4,      _5,      _6,   US_ADIA,                      US_ODIA, KC_LEFT, KC_DOWN,  KC_UP,  KC_RGHT, _______,
+     _______, KC_LGUI, LAT(_4), LCT(_5), LST(_6), US_ADIA,                      US_ODIA, KC_LEFT, KC_DOWN,  KC_UP,  KC_RGHT, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
      _______, XXXXXXX,    _1,      _2,      _3,   US_LDQU,                      US_RDQU,    DEL,    INS,     DOT,   XXXXXXX, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
