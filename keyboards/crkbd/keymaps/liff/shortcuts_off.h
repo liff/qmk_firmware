@@ -61,6 +61,8 @@
 #undef SCL
 #undef BSP
 #undef GRV
+#undef LSQ
+#undef RSQ
 #undef DEL
 #undef INS
 
