@@ -61,6 +61,8 @@
 #define SCL KC_SCLN
 #define BSP KC_BSPC
 #define GRV KC_GRV
+#define LSQ US_LSQU
+#define RSQ US_RSQU
 #define DEL KC_DEL
 #define INS KC_INS
 
