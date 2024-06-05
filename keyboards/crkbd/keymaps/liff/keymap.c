@@ -98,11 +98,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [4] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-     UC_WINC,  X(ELL), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                       US_MUL,  X(PLM),  X(AEQ),  X(NEQ), XXXXXXX, XXXXXXX,
+     UC_WINC, UM(ELL), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                       US_MUL, UM(PLM), UM(AEQ), UM(NEQ), XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     UC_LINX,  X(EMZ), US_QRTR, XXXXXXX,  X(LAM), XXXXXXX,                       X(MDO),  X(LAR),  X(DAR),  X(UAR),  X(RAR), XXXXXXX,
+     UC_LINX, UM(EMZ), US_QRTR, XXXXXXX, UM(LAM), XXXXXXX,                      UM(MDO), UM(LAR), UM(DAR), UM(UAR), UM(RAR), XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     QK_BOOT,  X(ENZ), XXXXXXX, US_HALF, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX,  X(LTE),  X(GTE),  X(IBA), XXXXXXX,
+     QK_BOOT, UM(ENZ), XXXXXXX, US_HALF, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, UM(LTE), UM(GTE), UM(IBA), XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                          XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX
                                       //`--------------------------'  `--------------------------'
