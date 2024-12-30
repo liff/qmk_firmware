@@ -55,7 +55,7 @@ mkShell {
   buildInputs = [ clang-tools_19 dfu-programmer dfu-util diffutils git pythonEnv niv ]
     ++ lib.optionals avr [
       pkgsCross.avr.buildPackages.binutils
-      pkgsCross.avr.buildPackages.gcc8
+      pkgsCross.avr.buildPackages.gcc
       avrlibc
       avrdude
     ]
