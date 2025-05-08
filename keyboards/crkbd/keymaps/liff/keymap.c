@@ -24,6 +24,8 @@ enum unicode_names {
     NEQ,
     LTE,
     GTE,
+    FOA,
+    EXI,
 };
 
 const uint32_t PROGMEM unicode_map[] = {
@@ -42,6 +44,8 @@ const uint32_t PROGMEM unicode_map[] = {
     [NEQ] = 0x2260, // ≠
     [LTE] = 0x2264, // ≤
     [GTE] = 0x2265, // ≥
+    [FOA] = 0x2200, // ∀
+    [EXI] = 0x2203, // ∃
 };
 
 // clang-format off
@@ -98,7 +102,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [4] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-     UC_WINC, UM(ELL), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                       US_MUL, UM(PLM), UM(AEQ), UM(NEQ), XXXXXXX, XXXXXXX,
+     UC_WINC, UM(ELL), XXXXXXX, UM(FOA), UM(EXI), XXXXXXX,                       US_MUL, UM(PLM), UM(AEQ), UM(NEQ), XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
      UC_LINX, UM(EMZ), US_QRTR, XXXXXXX, UM(LAM), XXXXXXX,                      UM(MDO), UM(LAR), UM(DAR), UM(UAR), UM(RAR), XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
